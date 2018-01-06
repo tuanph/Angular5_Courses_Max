@@ -11,7 +11,7 @@ export class AuthService {
 
   signUp(email: string, passwrod: string) {
     firebase.auth().createUserWithEmailAndPassword(email, passwrod)
-      .catch((error: any) => { console.error });
+      .catch((error: any) => { console.log(error); });
   }
 
   signIn(email: string, passwrod: string) {
@@ -23,7 +23,7 @@ export class AuthService {
             this.router.navigate(['/']);
           });
       })
-      .catch((error: any) => { console.log(error) });
+      .catch((error: any) => { console.log(error); });
   }
   logOut() {
     firebase.auth().signOut();

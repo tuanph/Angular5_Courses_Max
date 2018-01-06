@@ -7,15 +7,12 @@ import * as firebase from 'firebase';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  
-  ngOnInit(): void {
-    firebase.initializeApp({
-      apiKey: "AIzaSyD3nGEWED8Sm4fdY5ZErAVL34-ICZ02bwM",
-      authDomain: "recipebook-1adfd.firebaseapp.com"
-    });
-  }
   title = 'app';
 
-
-
+  ngOnInit(): void {
+    firebase.initializeApp({
+      apiKey: 'AIzaSyD3nGEWED8Sm4fdY5ZErAVL34-ICZ02bwM',
+      authDomain: 'recipebook-1adfd.firebaseapp.com'
+    });
+  }
 }
